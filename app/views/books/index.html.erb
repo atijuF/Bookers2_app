@@ -14,7 +14,7 @@
         <%= link_to book_path(book.id) do %>
           <%= image_tag book.get_image %>
         <% end %>
-        <td><%= image_tag 'sample-author1.jpg' %></td>
+        <td><%= image_tag book.user.get_profile_image(100,100) %></td>
         <td><%= link_to book.title, book_path(book.id) %></td>
         <td><%= book.body %> : </td>
       </tr>

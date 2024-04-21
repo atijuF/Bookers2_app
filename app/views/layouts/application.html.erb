@@ -36,6 +36,7 @@
     <% flash.each do |message_type, message| %>
       <div class="flash-message <%= message_type %>"><%= message %></div>
     <% end %>
+    
     <%= yield %>
     </main>
   </body>
