@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>Bookers2App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/3ed65e004c.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- < %= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> -->
   </head>
 
   <body>
@@ -37,7 +38,11 @@
       <div class="flash-message <%= message_type %>"><%= message %></div>
     <% end %>
     
+    <!-- サイドバー作成、UserinfoとNewbook -->
     <%= yield %>
     </main>
+    <fotter>
+      <!-- 後で書く -->
+    </fotter>
   </body>
 </html>
