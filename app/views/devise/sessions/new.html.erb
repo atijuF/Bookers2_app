@@ -1,9 +1,11 @@
 <h2>Log in</h2>
 
+<p>Name<br>Passward</p>
+
 <%= form_with model: @user, url: user_session_path do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "user-name" %>
   </div>
 
   <div class="field">

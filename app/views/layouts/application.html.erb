@@ -15,15 +15,31 @@
     <header>
       <% if user_signed_in? %>
       <li>
-        <%= link_to '投稿フォーム', new_book_path %>
+        <%= link_to 'Bookers', root_path %>
       </li>
       <li>
-        <%= link_to 'マイページ', user_path(current_user.id) %>
+        <%= link_to 'Home', user_path(current_user.id) %>
+      </li>
+      <li>
+        <%= link_to '投稿フォーム', new_book_path %>
+        <!-- 'Users' ユーザー一覧に変更 -->
+      </li>
+      <li>
+        <%= link_to 'Books', books_path %>
       </li>
       <li>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
+      <li>
+        <!-- Bookers root_rathに繋げる -->
+      </li>
+      <li>
+        <!-- Home 同上 -->
+      </li>
+      <li>
+        <!-- About homes/about.html.erbに繋げる -->
+      </li>
       <li>
         <%= link_to "Sign up", new_user_registration_path %>
       </li>
