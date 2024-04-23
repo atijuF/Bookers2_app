@@ -21,8 +21,7 @@
         <%= link_to 'Home', user_path(current_user.id) %>
       </li>
       <li>
-        <%= link_to '投稿フォーム', new_book_path %>
-        <!-- 'Users' ユーザー一覧に変更 -->
+        <%= link_to 'Users', users_path %>
       </li>
       <li>
         <%= link_to 'Books', books_path %>
@@ -32,13 +31,13 @@
       </li>
     <% else %>
       <li>
-        <!-- Bookers root_rathに繋げる -->
+        <%= link_to 'Bookers', root_path %>
       </li>
       <li>
-        <!-- Home 同上 -->
+        <%= link_to 'Home', root_path %>
       </li>
       <li>
-        <!-- About homes/about.html.erbに繋げる -->
+        <%= link_to 'About', about_path %>
       </li>
       <li>
         <%= link_to "Sign up", new_user_registration_path %>
@@ -58,7 +57,7 @@
     <%= yield %>
     </main>
     <fotter>
-      <!-- 後で書く -->
+      <p>CopyRight Infratop.inc</p>
     </fotter>
   </body>
 </html>
