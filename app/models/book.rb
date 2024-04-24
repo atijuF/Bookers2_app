@@ -2,8 +2,8 @@ class Book < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   
-  #validates :shop_name, presence: true
-  #validates :image, presence: true
+  validates :title, presence: true
+  validates :body, presence: true
   
   def get_image
     unless image.attached?

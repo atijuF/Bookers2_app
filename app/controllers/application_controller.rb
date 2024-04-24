@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     about_path
   end
+  
+  def applicaton
+    @user = User.find(params[:id])
+    @books = @user.books.page(params[:page])
+  end
 
   protected
 
