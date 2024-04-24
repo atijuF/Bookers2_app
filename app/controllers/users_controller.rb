@@ -13,6 +13,8 @@ class UsersController < ApplicationController
   end
   
   def index
+    @user = current_user
+    @book = Book.new
     @users = User.page(params[:page])
   end
   
