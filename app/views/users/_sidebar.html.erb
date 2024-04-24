@@ -9,10 +9,11 @@
       </tr>
       <tr>
         <th>introduction</th>
-        <th></th>
+        <th><%= user.introduction %></th>
       </tr>
     </tbody>
   </table>
   
-
-  
+<%= link_to edit_user_path(@user.id) do %>
+  <i class="fa-solid fa-user-gear"></i>
+<% end %>
