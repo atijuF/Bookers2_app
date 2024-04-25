@@ -20,15 +20,15 @@
           <tr>
             <td>
               <%= image_tag @user.get_profile_image(100,100) %>
-              <%= link_to @user.name, user_path(@user.id) %>
+              <br><%= link_to @user.name, user_path(@user.id) %>
             </td>
             <td><%= link_to @books.title, book_path(@books.id) %></td>
             <td><%= @books.body %></td>
             <% if current_user == @books.user %>
             <td>
-               <%= link_to "Edit", edit_book_path(@books.id) %></td>
+               <%= link_to "Edit", edit_book_path(@books.id), class: 'btn btn-sm btn-success' %></td>
             <td>
-                <%= link_to "Destroy", book_path(@books.id), method: :delete, "data-confirm" => "Are you sure?" %>
+                <%= link_to "Destroy", book_path(@books.id), method: :delete, class: 'btn btn-sm btn-danger', "data-confirm" => "Are you sure?" %>
             </td>
             <% end %>
           </tr>
