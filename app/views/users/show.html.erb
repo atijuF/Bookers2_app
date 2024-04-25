@@ -1,3 +1,11 @@
-<%= render 'users/sidebar', user: @user %>
-<%= render 'books/sidebar', book: @book %>
-<%= render 'books/list', books: @books %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render 'users/sidebar', user: @user %>
+      <%= render 'books/sidebar', book: @book %>
+    </div>
+    <div class="col-md-8">
+      <%= render 'books/list', books: @books %>
+    </div>
+  </div>
+</div>
