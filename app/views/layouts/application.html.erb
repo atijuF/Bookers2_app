@@ -15,16 +15,13 @@
     <header class="shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 mb-3">
         <div class="container">
-          <a class="navbar-brand p-3" href="/"></a>
+          <a class="navbar-brand" href="/"><span>Bookers</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to 'Bookers', root_path, class: 'nav-link text-white' %>
-            </li>
             <li class="nav-item">
               <i class="fa fa-solid fa-house text-white"></i>
               <%= link_to 'Home', user_path(current_user.id), class: 'nav-link text-white' %>
@@ -42,9 +39,6 @@
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
             </li>
           <% else %>
-            <li class="nav-item">
-              <%= link_to 'Bookers', root_path, class: 'nav-link text-white' %>
-            </li>
             <li class="nav-item">
               <i class="fa fa-solid fa-house text-white"></i>
               <%= link_to 'Home', root_path, class: 'nav-link text-white' %>
@@ -78,7 +72,7 @@
     <fotter class="bg-white text-dark pt-5 pb-4 text-center">
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col">
             <p>CopyRight Infratop.inc</p>
           </div>
         </div>
