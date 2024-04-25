@@ -5,6 +5,6 @@
   <label for="inputImage">ProfileImage</label>
   <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>  
   <label for="Introduction">Introduction</label>
-  <%= f.text_area :Introduction, id:"Introduction", placeholder:"Messege"%>
+  <%= f.text_area :introduction, id:"Introduction", placeholder:"Messege"%>
   <%= f.submit "Update User" %>
 <% end %>
